@@ -8,7 +8,7 @@
 :root{
     font-size: 62.5%;
     --bg-color: #121214;
-    --timer-fontsz: clamp(5rem, 8rem + 5vw, 10rem);
+    --timer-fontsz: clamp(5rem, 8rem + 5vw, 9.7rem);
     --btn-bg: rgba(66, 211, 255, 0.13);
     --btn-color: #42D3FF;
     --btn-sz: clamp(6.2rem, 6.5rem + 1vw, 8rem);
