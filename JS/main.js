@@ -13,8 +13,8 @@ export const buttons = {
 }
 
 export const timer = {
-    minutes: document.querySelector('.minutes'),
-    seconds: document.querySelector('.seconds'),
+    minutesDisplay: document.querySelector('.minutes'),
+    secondsDisplay: document.querySelector('.seconds'),
 }
 
 
@@ -22,6 +22,7 @@ export const timer = {
 
 buttons.playButton.addEventListener('click', function(){
     controls.play()
+    countdown.timerDisplay()
     
 })
 
