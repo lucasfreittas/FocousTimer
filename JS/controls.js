@@ -1,6 +1,7 @@
 import {buttons} from "./main.js"
 
 
+//--------------------------CONFIG BUTTONS ACTIONS---------------------
 
 export let play = () => {
     buttons.playButton.classList.add('hide')
@@ -11,7 +12,6 @@ export let play = () => {
     buttons.soundButton.classList.remove('hide');
 }
     
-
 
 export let pause = () => {
     buttons.pauseButton.classList.add('hide');

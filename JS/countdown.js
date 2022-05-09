@@ -1,7 +1,7 @@
 import {timer} from "./main.js"
 
-let time;
-let setTime
+let time; // We have to set timer so after we can pause/stop 
+let setTime // This set time load the usuer input timer
 
 export let setTimer = () => {
     setTime = prompt(`Quantos minutos vamos nos concentrar?`) || 0
