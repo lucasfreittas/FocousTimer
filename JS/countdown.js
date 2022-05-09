@@ -1,13 +1,15 @@
 import {timer} from "./main.js"
 
+let time;
+let setTime
 
 export let setTimer = () => {
-    let set = prompt(`Quantos minutos vamos nos concentrar?`)
-    timer.minutesDisplay.innerText = String(set).padStart(2, '0')
+    setTime = prompt(`Quantos minutos vamos nos concentrar?`) || 0
+    timer.minutesDisplay.innerText = String(setTime).padStart(2, '0')
 }
 
 export let timerDisplay = () => {
-    setTimeout(function(){
+    time = setTimeout(function(){
         let seconds = Number(timer.secondsDisplay.textContent)
         let minutes = Number(timer.minutesDisplay.textContent)
 
@@ -16,7 +18,7 @@ export let timerDisplay = () => {
         }
 
         if(seconds <= 0){
-            seconds = 10
+            seconds = 60
 
             timer.minutesDisplay.textContent = String(minutes - 1).padStart(2, "0")
         }
@@ -31,3 +33,12 @@ export let timerDisplay = () => {
 }
 
 
+export let pauseTimer = () => {
+    clearTimeout(time)
+}
+
+export let stopTimer = () => {
+    timer.minutesDisplay.innerText = String(setTime).padStart(2, '0')
+    timer.secondsDisplay.innerText = String("00")
+    clearTimeout(time)
+}

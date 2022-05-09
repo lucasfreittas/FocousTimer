@@ -5,6 +5,9 @@ import {buttons} from "./main.js"
 export let play = () => {
     buttons.playButton.classList.add('hide')
     buttons.pauseButton.classList.remove('hide')
+    buttons.watchButton.classList.add('hide');
+    buttons.stopButton.classList.remove('hide');
+    
 }
 
 export let pause = () => {
@@ -20,6 +23,8 @@ export let watch = () => {
 export let stop = () => {
     buttons.stopButton.classList.add('hide');
     buttons.watchButton.classList.remove('hide');
+    buttons.pauseButton.classList.add('hide');
+    buttons.playButton.classList.remove('hide');
 }
 
 export let sound = () => {
