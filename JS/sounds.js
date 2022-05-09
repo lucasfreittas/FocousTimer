@@ -8,7 +8,7 @@ export let bgSoundPlay = () => {
 }
 
 export let bgSoundStop = () => {
-    bgAudio.stop()
+    bgAudio.pause()
 }
 
 export let clockSound = () => {

@@ -7,12 +7,17 @@ export let play = () => {
     buttons.pauseButton.classList.remove('hide')
     buttons.watchButton.classList.add('hide');
     buttons.stopButton.classList.remove('hide');
-    
+    buttons.muteButton.classList.add('hide');
+    buttons.soundButton.classList.remove('hide');
 }
+    
+
 
 export let pause = () => {
     buttons.pauseButton.classList.add('hide');
     buttons.playButton.classList.remove('hide');
+    buttons.soundButton.classList.add('hide');
+    buttons.muteButton.classList.remove('hide');
 }
 
 export let watch = () => {
@@ -25,6 +30,8 @@ export let stop = () => {
     buttons.watchButton.classList.remove('hide');
     buttons.pauseButton.classList.add('hide');
     buttons.playButton.classList.remove('hide');
+    buttons.soundButton.classList.add('hide');
+    buttons.muteButton.classList.remove('hide');
 }
 
 export let sound = () => {

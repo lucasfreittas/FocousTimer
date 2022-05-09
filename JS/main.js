@@ -1,6 +1,6 @@
 import * as controls from "./controls.js"
 import * as countdown from "./countdown.js"
-export * as sounds from "./sounds.js"
+import * as sounds from "./sounds.js"
 
 
 //------------------------DOM----------------------------------//
@@ -25,12 +25,14 @@ export const timer = {
 buttons.playButton.addEventListener('click', function(){
     controls.play()
     countdown.timerDisplay()
+    sounds.bgSoundPlay()
     
 })
 
 buttons.pauseButton.addEventListener('click', function(){
     controls.pause()
     countdown.pauseTimer()
+    sounds.bgSoundStop()
 })
 
 buttons.watchButton.addEventListener('click', function(){
@@ -41,14 +43,16 @@ buttons.watchButton.addEventListener('click', function(){
 buttons.stopButton.addEventListener('click', function(){
     controls.stop()
     countdown.stopTimer()
+    sounds.bgSoundStop()
 })
 
 buttons.soundButton.addEventListener('click', function(){
     controls.sound()
-    sounds.bgSoundPlay()
+    sounds.bgSoundStop()
 })
 
 buttons.muteButton.addEventListener('click', function(){
     controls.mute()
+    sounds.bgSoundPlay()
 })
 
